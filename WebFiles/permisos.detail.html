@@ -1,0 +1,21 @@
+<form>
+    <fieldset>
+        <label>Persona</label>
+        <input class="span2" type="text" ng-model="selectedRow.persona">
+        <label>Acceso</label>
+        <select name="acceso"
+                ng-model="selectedRow.permiso"
+                ng-options="key as value for (key,value) in accesos"
+                class="span2" style="height:30px;width:110px"
+                ng-disabled="ReadOnly">
+        </select>
+        <label>PIN</label>
+        <input class="span2" type="text" ng-model="selectedRow.persona_PIN">
+        <label>Puerta</label>
+        <input class="span2" type="text" ng-model="selectedRow.puerta_num">
+        <label>Tarjeta RFID</label>
+        <input class="span2" type="text" ng-model="selectedRow.tarjeta_RFID">
+        <label>Fecha Vencida</label>
+        <input class="span2" type="text" ng-model="selectedRow.fecha_vencida">
+    </fieldset>
+</form>

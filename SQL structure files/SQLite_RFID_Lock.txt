@@ -1,0 +1,36 @@
+CREATE TABLE `seguridad_permisos` (
+  `SEQ` int(6) DEFAULT NULL,
+  `puerta_SEQ` smallint(3) DEFAULT NULL,
+  `tarjeta_RFID` varchar(10) PRIMARY KEY,
+  `persona_SEQ` smallint(6) NOT NULL,
+  `persona` text,
+  `persona_PIN` varchar(4) DEFAULT NULL,
+  `permiso` varchar(1) DEFAULT NULL,
+  `domingo` varchar(1) DEFAULT NULL,
+  `noche_inicio` time DEFAULT NULL,
+  `noche_fin` time DEFAULT NULL
+)
+  
+CREATE TABLE `seguridad_puerta` (
+  `SEQ` smallint(3) PRIMARY KEY,
+  `puerta` varchar(16) NOT NULL DEFAULT '',
+  `zona` varchar(10) DEFAULT NULL,
+  `requiere_PIN` varchar(1)  DEFAULT NULL,
+  `alarma` varchar(1)  DEFAULT NULL,
+  `IP_puerta` varchar(15) DEFAULT NULL,
+  `IP_servidor` varchar(15) DEFAULT NULL,
+  `URL_puerta` text,
+  `URL_servidor` text
+)
+
+{"SEQ": 1, "puerta": "porton", "zona": "fabrica", "requiere_PIN": "0", "alarma": "1", "IP_puerta": "192.168.100.2", "IP_servidor": "192.168.100.1", "URL_puerta": "http://PI_1.totaicitrus.com:8080/", "URL_servidor": "http://www.desa-net.com/TOTAI/db/"}
+
+CREATE TABLE "seguridad_entrada" (
+	`SEQ` INTEGER PRIMARY KEY,
+	`puerta_num` smallint(3) DEFAULT NULL,
+	`tarjeta_RFID` varchar(10) NOT NULL DEFAULT '0',
+	`persona_SEQ` smallint(6) NOT NULL,
+	`persona` text,
+	`fecha_hora` datetime DEFAULT NULL,
+	`permiso` varchar(1) DEFAULT NULL
+)
