@@ -1,11 +1,9 @@
-import os.path
 import cherrypy
-import sqlite3
 import json
-import time
 import sys
 #import requests
 from editDNS import *       # Including the editDNS.py file to use the rebootPi() and installGitCode() functions
+#import configuration       conflict with DB variable name
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 DBpath = os.path.join(current_dir, 'RFID_Lock.sqlite')

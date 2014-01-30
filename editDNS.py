@@ -18,7 +18,7 @@ IP_ADDRESS = "192.168.0.53"
 SUB_MASK = "255.255.255.0"
 ROUTER = "192.168.0.12"
 
-DNS= "212.40.0.10"
+DNS = "212.40.0.10"
 
 ########################################################################################################################
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -33,7 +33,7 @@ def readSqlite():
         global personID, personName, personPIN, currentDate, currentTime, tagRecognized, dateIsSunday, doorNumber
         c = con.cursor()
 
-        c.execute("SELECT * FROM seguridad_puerta WHERE (SEQ=:x)", {"x":DOOR_NUMBER})
+        c.execute("SELECT * FROM seguridad_puerta")
         row = c.fetchone()
 
         ipNumber = row[5]
@@ -59,7 +59,6 @@ def changeDNS(DNS):
 
 ########################################################################################################################
 def changeIP():
-
     textIP = ["auto lo",
               "",
               "iface lo inet loopback",
@@ -68,7 +67,7 @@ def changeIP():
               "allow-hotplug wlan0",
               "iface wlan0 inet static",
               "wpa-ssid %s" % NETWORK,
-              "wpa-psk %s" %  PASSOWRD,
+              "wpa-psk %s" % PASSOWRD,
               "address %s" % IP_ADDRESS,
               "netmask %s" % SUB_MASK,
               "network 192.168.0.0",
@@ -84,7 +83,7 @@ def changeIP():
     textFile.write(joinedString)
     textFile.close()
 
-    shellCall = "sudo mv %s/interfaces /etc/network" %(current_dir)
+    shellCall = "sudo mv %s/interfaces /etc/network" % (current_dir)
 
     r = subprocess.Popen(shellCall, stdout=subprocess.PIPE, shell=True)
     r.communicate()
@@ -107,7 +106,6 @@ def installLib():
 
     testCall = ["sudo easy_install -U pyserial"]
 
-
     for i in range(len(testCall)):
         r = subprocess.Popen(testCall[i], stdout=subprocess.PIPE, shell=True)
         print testCall[i]
@@ -121,8 +119,8 @@ def installLib():
 ########################################################################################################################
 def installGitCode():
     textGit = ["cd ~",
-               "git clone https://github.com/pbernasconi/RFID-raspberryPi.git",
-               "cd /RFID-raspberryPi"]
+               "git clone https://github.com/pbernasconi/piLock.git",
+               "cd /piLock"]
 
     for i in range(len(textGit)):
         r = subprocess.Popen(textGit[i], stdout=subprocess.PIPE, shell=True)
@@ -167,8 +165,7 @@ def createStartScript():
     textFile.write(joinedString)
     textFile.close()
 
-
-    commands = ["sudo mv %s/%s /etc/init.d/"% (current_dir, fileName),
+    commands = ["sudo mv %s/%s /etc/init.d/" % (current_dir, fileName),
                 "sudo chmod 755 /etc/init.d/%s" % (fileName),
                 "sudo update-rc.d %s defaults" % (fileName)]
 

@@ -2,6 +2,7 @@ import psutil as p
 import os
 import json
 from firebasin import Firebase
+import piLock.configuration as conf
 
 FIREBASE_URL = 'https://pilock.firebaseio.com'
 fb = Firebase(FIREBASE_URL)

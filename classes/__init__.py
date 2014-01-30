@@ -1,2 +1,2 @@
-__author__ = 'paolob'
-__all__ = ["classEntradaLog", "classPermiso", "classSystemStats", "classKeypad"]
+
+__all__ = ["classEntradaLog", "classErrorLog", "classKeypad", "classLED", "classPermiso", "classSystemStats"]
