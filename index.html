@@ -1,145 +1,21 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-US">
+<html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Raspberry Pi RFID Door Lock</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
+	<!--
 	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/plugins/github-badge/github-badge.css?ver=3.9">
 	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/plugins/wp-bootstrap-carousel/css/carousel.min.css?ver=0.2.1">
-	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1">
-
 	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/plugins/wp-linkedin/style.css?ver=1.5.2">
-	<link rel="stylesheet" href="http://www.pi-lock.com/?sccss=1&#038;ver=3.9">
-	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/css/style.css">
-	<style type='text/css'>
-		body {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-
-		.fa {
-			color: #5C8AC8;
-			font-size: 6em;
-		}
-
-		footer.content-info {
-			color: #ffffff;
-			background: #777777;
-			padding: 18px 10px 18px;
-			margin-top: 10px;
-		}
-
-		footer div.container {
-			margin-top: 3.81966011px;
-		}
-
-		#copyright-bar {
-			line-height: 30px;
-		}
-
-		#footer_social_bar {
-			line-height: 30px;
-			font-size: 16px;
-			text-align: right;
-		}
-
-		#footer_social_bar a {
-			margin-left: 9px;
-			padding: 3px;
-			color: #ffffff;
-		}
-
-		#footer_social_bar a:hover, #footer_social_bar a:active {
-			color: #5c8ac8 !important;
-			text-decoration: none;
-		}
-
-		.header-wrapper {
-			color: #ffffff;
-			background: #5c8ac8;
-
-		.header-wrapper {
-			color: #ffffff;
-			background: #5c8ac8;
-			margin-top: px;
-			margin-bottom: px;
-		}
-
-		.jumbotron {
-			background-attachment: fixed;
-			margin-bottom: 0px;
-		}
-
-		.navbar-static-top {
-			margin-top: px !important;
-			margin-bottom: px !important;
-		}
-	</style>
-	<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-	<script>window.jQuery || document.write('<script src="http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-	<script type='text/javascript'
-	        src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/modernizr-2.7.0.min.js'></script>
-	<style type="text/css">
-		a.bbp-author-avatar {
-			display: inline-block;
-		}
-
-		.bbp-reply-author img,
-		.bbp-topic-started-by-avatar-avatar img,
-		.bbp-topic-freshness-author img {
-			border-radius: 50%;
-		}
-
-		.bbp-topic-freshness-author a {
-			display: inline-block;
-		}
-
-		.bbp-topic-freshness-author a.bbp-author-name {
-			display: none;
-		}
-
-		.bbp-topic-freshness-author p.bbp-topic-meta {
-			display: inline-block;
-		}
-	</style>
-	<link rel="shortcut icon" href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-32x32.png"
-	      type="image/x-icon"/>
-	<!-- For iPhone -->
-	<link rel="apple-touch-icon-precomposed"
-	      href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-57x57.png">
-	<!-- For iPhone 4 Retina display -->
-	<link rel="apple-touch-icon-precomposed" sizes="114x114"
-	      href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-57x57@2x.png">
-	<!-- For iPad -->
-	<link rel="apple-touch-icon-precomposed" sizes="72x72"
-	      href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-72x72.png">
-	<!-- For iPad Retina display -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144"
-	      href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-72x72@2x.png">
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/html5shiv.js"></script>
-	<script src="http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/respond.min.js"></script>
-	<![endif]-->
-
-	<link rel="alternate" type="application/rss+xml" title="Pi-Lock Feed" href="http://www.pi-lock.com/feed/">
+	-->
 </head>
-<body class="home page page-template page-template-template-0-php   wpbc-shoestrap3 top-navbar">
-
-<!--[if lt IE 8]>
-<div class="alert alert-warning">
-	You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your
-	browser</a> to improve your experience.
-</div>
-<![endif]-->
-
+<body class="top-navbar">
 
 <header class="banner navbar navbar-default topnavbar navbar navbar-fixed-top default" role="banner">
 	<div class="container">
@@ -557,23 +433,13 @@
 			</article>
 		</div>
 	</div>
-	</div>
 </footer>
 
-</div>
 
 
-<style>.cpm-map img {
-	max-width: none;
-	box-shadow: none;
-}</style>
-<script type='text/javascript'
-        src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/bootstrap.min.js'></script>
-<script type='text/javascript' src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/main.js'></script>
-<script type='text/javascript'
-        src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/retina.js'></script>
-<script type='text/javascript'
-        src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/jquery.fitvids.js'></script>
+
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
