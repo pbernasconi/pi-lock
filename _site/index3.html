@@ -12,9 +12,7 @@
 
 
 
-<h1>Home</h1>
-
-<header class="navbar navbar-default">
+<nav class="navbar navbar-default" role="navigation">
 
 	<div class="container">
 		<div class="navbar-header">
@@ -30,51 +28,21 @@
 			</a>
 		</div>
 
-		<div class="nav-extras">
-		</div>
-		<nav class="nav-main navbar-collapse collapse" role="navigation">
+
+		<div class="nav-main navbar-collapse collapse">
 			<ul class="nav navbar-nav pull-right ">
-				<li class="active"><a href="http://www.pi-lock.com/">Home</a></li>
-				<li class="dropdown"><a class="dropdown-toggle" href="http://www.pi-lock.com/participate/">Hardware <b
-					class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="http://www.pi-lock.com/participate/overview/">Overview</a></li>
-						<li><a href="http://www.pi-lock.com/participate/purchase-parts/">Purchase The Parts</a></li>
-						<li><a href="http://www.pi-lock.com/participate/assemble/">Assemble</a></li>
-					</ul>
-				</li>
-
-				<li class="dropdown"><a class="dropdown-toggle" href="http://www.pi-lock.com/software/">Software <b
-					class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="http://www.pi-lock.com/software/install/">Install</a></li>
-						<li><a href="http://www.pi-lock.com/software/source-code/">Source Code</a></li>
-						<li><a href="http://www.pi-lock.com/software/run/">Run</a></li>
-					</ul>
-				</li>
-
-				<li class="dropdown"><a class="dropdown-toggle" href="http://">Web Server <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="http://www.pi-lock.com/rpi-front-end/">RPi Front End</a></li>
-						<li><a href="http://www.pi-lock.com/rpi-back-end/">RPi Back-End</a></li>
-						<li><a href="http://www.pi-lock.com/main-front-end/">Main Front-End</a></li>
-						<li><a href="http://www.pi-lock.com/main-back-end/">Main Back-End</a></li>
-					</ul>
-				</li>
-
-				<li class="dropdown menu-about"><a class="dropdown-toggle" href="http://www.pi-lock.com/about/">About <b
-					class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="http://www.pi-lock.com/about/contact/">Contact</a></li>
-						<li><a href="http://www.pi-lock.com/about/me/">Me</a></li>
-					</ul>
-				</li>
+				<li><a class="products-nav nav-link" href="/products/">Products</a></li>
+				<li><a class="getting-started-nav nav-link" href="/getting-started/">Getting Started</a></li>
+				<li><a class="docs-nav nav-link" href="/docs/">Docs</a></li>
+				<li><a class="examples-nav nav-link" href="http://showcase.ionicframework.com/">Showcase</a></li>
+				<li><a class="nav-link" href="http://forum.ionicframework.com/">Forum</a></li>
+				<li><a class="blog-nav nav-link" href="/blog/">Blog <span id="blog-badge">1</span></a></li>
 			</ul>
-		</nav>
+		</div>
 	</div>
-</header>
+</nav>
 
-
+<h1>Home</h1>
 <div class="before-main-wrapper">
 	<div class="container home-header">
 		<div class="row first-row text-center">
@@ -223,5 +191,57 @@
 </body>
 </html>
 
+
 </body>
-</html>
+<footer class="footer">
+
+	<div class="newsletter row">
+
+		<div class="col-sm-7">
+			<div class="newsletter-text">Stay in the loop with ionic!</div>
+			<div class="sign-up">Sign up to receive emails on updates, features, and news on the framework.</div>
+		</div>
+
+		<form action="http://codiqa.createsend.com/t/t/s/jytylh/" method="post" class="input-group col-sm-5">
+			<input id="fieldEmail" name="cm-jytylh-jytylh" class="form-control" type="email" placeholder="Email" required />
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">Subscribe</button>
+      </span>
+		</form>
+
+	</div>
+
+	<p class="authors">
+		Created by <a href="https://twitter.com/maxlynch">@maxlynch</a>,
+		<a href="https://twitter.com/adamdbradley">@adamdbradley</a>, and
+		<a href="https://twitter.com/benjsperry">@benjsperry</a>. Code licensed under
+		<a href="/docs/#license">MIT</a>. Docs under <a href="https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)">Apache 2</a>.
+	</p>
+	<nav class="base-links">
+		<a href="/docs/">Docs</a>
+		&#183; <a href="/blog/">Blog</a>
+		&#183; <a href="/present-ionic/">Present Ionic</a>
+		&#183; <a href="http://forum.ionicframework.com/">Forum</a>
+		&#183; <a href="/contribute/">Contribute</a>
+		&#183; <a href="http://ionicons.com/">Ionicons</a>
+		&#183; <a href="https://github.com/driftyco/ionic">Github</a>
+		&#183; <a href="/contribute/#issues">Issues</a>
+		&#183; <a href="/jobs/">Jobs</a>
+	</nav>
+</footer>
+<script type="text/javascript">
+	var _sf_async_config = { uid: 54141, domain: 'ionicframework.com', useCanonical: true };
+	(function() {
+		function loadChartbeat() {
+			window._sf_endpt = (new Date()).getTime();
+			var e = document.createElement('script');
+			e.setAttribute('language', 'javascript');
+			e.setAttribute('type', 'text/javascript');
+			e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+			document.body.appendChild(e);
+		};
+		var oldonload = window.onload;
+		window.onload = (typeof window.onload != 'function') ?
+			loadChartbeat : function() { oldonload(); loadChartbeat(); };
+	})();
+</script>
