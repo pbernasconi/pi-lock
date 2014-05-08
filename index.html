@@ -1,79 +1,579 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Raspberry Pi RFID Door Lock</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Pi-lock : A RFID solution for Access Control and Management" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/plugins/github-badge/github-badge.css?ver=3.9">
+	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/plugins/wp-bootstrap-carousel/css/carousel.min.css?ver=0.2.1">
+	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/plugins/font-awesome/assets/css/font-awesome.min.css?ver=3.2.1">
 
-    <title>Pi-lock</title>
-  </head>
+	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/plugins/wp-linkedin/style.css?ver=1.5.2">
+	<link rel="stylesheet" href="http://www.pi-lock.com/?sccss=1&#038;ver=3.9">
+	<link rel="stylesheet" href="http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/css/style.css">
+	<style type='text/css'>
+		body {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
 
-  <body>
+		.fa {
+			color: #5C8AC8;
+			font-size: 6em;
+		}
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/pbernasconi/pi-lock">View on GitHub</a>
+		footer.content-info {
+			color: #ffffff;
+			background: #777777;
+			padding: 18px 10px 18px;
+			margin-top: 10px;
+		}
 
-          <h1 id="project_title">Pi-lock</h1>
-          <h2 id="project_tagline">A RFID solution for Access Control and Management</h2>
+		footer div.container {
+			margin-top: 3.81966011px;
+		}
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/pbernasconi/pi-lock/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/pbernasconi/pi-lock/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+		#copyright-bar {
+			line-height: 30px;
+		}
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+		#footer_social_bar {
+			line-height: 30px;
+			font-size: 16px;
+			text-align: right;
+		}
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+		#footer_social_bar a {
+			margin-left: 9px;
+			padding: 3px;
+			color: #ffffff;
+		}
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+		#footer_social_bar a:hover, #footer_social_bar a:active {
+			color: #5c8ac8 !important;
+			text-decoration: none;
+		}
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+		.header-wrapper {
+			color: #ffffff;
+			background: #5c8ac8;
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+		.header-wrapper {
+			color: #ffffff;
+			background: #5c8ac8;
+			margin-top: px;
+			margin-bottom: px;
+		}
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+		.jumbotron {
+			background-attachment: fixed;
+			margin-bottom: 0px;
+		}
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+		.navbar-static-top {
+			margin-top: px !important;
+			margin-bottom: px !important;
+		}
+	</style>
+	<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script>window.jQuery || document.write('<script src="http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type='text/javascript'
+	        src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/modernizr-2.7.0.min.js'></script>
+	<style type="text/css">
+		a.bbp-author-avatar {
+			display: inline-block;
+		}
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+		.bbp-reply-author img,
+		.bbp-topic-started-by-avatar-avatar img,
+		.bbp-topic-freshness-author img {
+			border-radius: 50%;
+		}
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+		.bbp-topic-freshness-author a {
+			display: inline-block;
+		}
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+		.bbp-topic-freshness-author a.bbp-author-name {
+			display: none;
+		}
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+		.bbp-topic-freshness-author p.bbp-topic-meta {
+			display: inline-block;
+		}
+	</style>
+	<link rel="shortcut icon" href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-32x32.png"
+	      type="image/x-icon"/>
+	<!-- For iPhone -->
+	<link rel="apple-touch-icon-precomposed"
+	      href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-57x57.png">
+	<!-- For iPhone 4 Retina display -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	      href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-57x57@2x.png">
+	<!-- For iPad -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	      href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-72x72.png">
+	<!-- For iPad Retina display -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	      href="http://www.pi-lock.com/wp-content/uploads/2014/01/lock-logo-72x72@2x.png">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/html5shiv.js"></script>
+	<script src="http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/respond.min.js"></script>
+	<![endif]-->
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+	<link rel="alternate" type="application/rss+xml" title="Pi-Lock Feed" href="http://www.pi-lock.com/feed/">
+</head>
+<body class="home page page-template page-template-template-0-php   wpbc-shoestrap3 top-navbar">
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Pi-lock maintained by <a href="https://github.com/pbernasconi">pbernasconi</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+<!--[if lt IE 8]>
+<div class="alert alert-warning">
+	You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your
+	browser</a> to improve your experience.
+</div>
+<![endif]-->
 
-    
 
-  </body>
+<header class="banner navbar navbar-default topnavbar navbar navbar-fixed-top default" role="banner">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-main, .nav-extras">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand logo" href="http://www.pi-lock.com/"><img id="site-logo"
+			                                                                 src="http://www.pi-lock.com/wp-content/uploads/2014/01/Logo1.png"
+			                                                                 alt="Pi-Lock"></a></div>
+		<div class="nav-extras">
+		</div>
+		<nav class="nav-main navbar-collapse collapse" role="navigation">
+			<ul id="menu-navbar" class="nav pull-right navbar-nav">
+				<li class="active menu-home"><a href="http://www.pi-lock.com/">Home</a></li>
+				<li class="dropdown menu-hardware"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#"
+				                                      href="http://www.pi-lock.com/participate/">Hardware <b
+					class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class="menu-overview"><a href="http://www.pi-lock.com/participate/overview/">Overview</a>
+						</li>
+						<li class="menu-purchase-the-parts"><a
+							href="http://www.pi-lock.com/participate/purchase-parts/">Purchase The Parts</a></li>
+						<li class="menu-assemble"><a href="http://www.pi-lock.com/participate/assemble/">Assemble</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown menu-software"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#"
+				                                      href="http://www.pi-lock.com/software/">Software <b
+					class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class="menu-install"><a href="http://www.pi-lock.com/software/install/">Install</a></li>
+						<li class="menu-source-code"><a href="http://www.pi-lock.com/software/source-code/">Source
+							Code</a></li>
+						<li class="menu-run"><a href="http://www.pi-lock.com/software/run/">Run</a></li>
+					</ul>
+				</li>
+				<li class="dropdown menu-web-server"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#"
+				                                        href="http://">Web Server <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class="dropdown-header menu-rpi-server">RPi Server</li>
+						<li class="menu-rpi-front-end"><a href="http://www.pi-lock.com/rpi-front-end/">RPi Front End</a>
+						</li>
+						<li class="menu-rpi-back-end"><a href="http://www.pi-lock.com/rpi-back-end/">RPi Back-End</a>
+						</li>
+						<li class="dropdown-header menu-main-sever">Main Sever</li>
+						<li class="menu-main-front-end"><a href="http://www.pi-lock.com/main-front-end/">Main
+							Front-End</a></li>
+						<li class="menu-main-back-end"><a href="http://www.pi-lock.com/main-back-end/">Main Back-End</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-discuss"><a href="http://www.pi-lock.com/discuss/">Discuss</a></li>
+				<li class="dropdown menu-about"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#"
+				                                   href="http://www.pi-lock.com/about/">About <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class="menu-contact"><a href="http://www.pi-lock.com/about/contact/">Contact</a></li>
+						<li class="menu-me"><a href="http://www.pi-lock.com/about/me/">Me</a></li>
+					</ul>
+				</li>
+				<li class="menu-blog"><a href="http://www.pi-lock.com/blog/">Blog</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<div class="before-main-wrapper">
+	<div id="megaDrop" class="top-megamenu container">
+
+
+		<div class="row">
+
+
+		</div>
+	</div>
+
+	<div class="header-wrapper">
+		<div class="container">
+
+
+			<div>
+
+				<div class="container">
+					<div class="textwidget"></div>
+				</div>
+			</div>
+		</div>
+		<div class=" container home-header">
+			<div class="row first-row">
+				<div class="text-center">
+					<h1> Pi Lock </h1>
+
+					<h2>A RFID solution for Access Control and Management</h2>
+				</div>
+			</div>
+			<!--row-->
+
+			<div class="row home-button-row">
+				<div class="col-md-4 col-sm-4 text-center">
+					<a class="btn btn-lg btn-default btn-home" href="https://www.pi-lock.com/participate/assemble/">Assemble
+						Hardware</a>
+				</div>
+				<div class="col-md-4 col-sm-4 text-center">
+					<a class="btn btn-lg btn-default btn-home" href="https://www.pi-lock.com/software/source-code/">Read
+						Source Code</a>
+				</div>
+				<div class="col-md-4 col-sm-4 text-center">
+					<a class="btn btn-lg btn-default btn-home"
+					   href="https://www.pi-lock.com/participate/purchase-parts/">Purchase the Parts</a>
+				</div>
+			</div>
+			<!--row-->
+		</div>
+		<!--customHeader--></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="clearfix"></div>
+
+</div>
+
+
+<div class="wrap main-section container" role="document">
+
+
+	<div class="content">
+		<div class="row bg">
+
+
+			<main class="main col-sm-12" role="main">
+
+				<ul class="social-row">
+					<li class="github-watch">
+						<iframe
+							src="http://ghbtns.com/github-btn.html?user=pi-lock&amp;repo=pi&amp;type=watch&amp;count=true"
+							allowtransparency="true" frameborder="0" scrolling="0" width="180" height="30"></iframe>
+					</li>
+					<li class="github-fork">
+						<iframe
+							src="http://ghbtns.com/github-btn.html?user=pi-lock&amp;repo=pi&amp;type=fork&amp;count=true"
+							allowtransparency="true" frameborder="0" scrolling="0" width="180" height="30"></iframe>
+					</li>
+					<li class="linkedin">
+						<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+						<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/paolobernasconi"
+						        data-format="hover" data-text="Paolo B" data-related="false"></script>
+					</li>
+				</ul>
+				<hr class="featurette-divider"/>
+				<div class="jumbotron home-jumbo">
+					<h2>About</h2>
+
+					<p>Pi-Lock is an automated door Security System built around the Raspberry Pi. Using a RFID reader
+						and PIN entry system, access to buildings, departments and rooms is controlled in a secure,
+						efficient, and cost-minimizing system.</p>
+
+					<p><a class="btn btn-lg btn-default btn-jumbo" href="https://www.pi-lock.com/discuss/">Join the
+						Discussion</a>
+				</div>
+				<hr class="featurette-divider"/>
+				<h2 class="text-center">Development Photos</h2>
+
+				<div id="cptbc_86" class="carousel slide">
+					<ol class="carousel-indicators">
+						<li data-target="#cptbc_86" data-slide-to="0" data-interval="4000" class="active"></li>
+						<li data-target="#cptbc_86" data-slide-to="1" data-interval="4000"></li>
+						<li data-target="#cptbc_86" data-slide-to="2" data-interval="4000"></li>
+						<li data-target="#cptbc_86" data-slide-to="3" data-interval="4000"></li>
+						<li data-target="#cptbc_86" data-slide-to="4" data-interval="4000"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<img width="3264" height="2448"
+							     src="http://www.pi-lock.com/wp-content/uploads/2014/02/sideView-small.jpg"
+							     class="attachment-full wp-post-image" alt="sideView-small">
+
+							<div class="carousel-caption">
+								<h4>Side View</h4>
+
+								<p>Version 1</p>
+							</div>
+						</div>
+						<div class="item ">
+							<img width="3264" height="2448"
+							     src="http://www.pi-lock.com/wp-content/uploads/2014/02/faceView-small.jpg"
+							     class="attachment-full wp-post-image" alt="faceView-small">
+
+							<div class="carousel-caption">
+								<h4>Face showing to User</h4>
+
+								<p>Version 1</p>
+							</div>
+						</div>
+						<div class="item ">
+							<img width="3264" height="2448"
+							     src="http://www.pi-lock.com/wp-content/uploads/2014/02/rearView-small.jpg"
+							     class="attachment-full wp-post-image" alt="rearView-small">
+
+							<div class="carousel-caption">
+								<h4>Rear View of Face</h4>
+
+								<p>Version 1</p>
+							</div>
+						</div>
+						<div class="item ">
+							<img width="3264" height="2448"
+							     src="http://www.pi-lock.com/wp-content/uploads/2014/02/version2-small.jpg"
+							     class="attachment-full wp-post-image" alt="version2-small">
+
+							<div class="carousel-caption">
+								<h4>Top View of Version 2</h4>
+
+								<p></p>
+							</div>
+						</div>
+						<div class="item ">
+							<img width="3110" height="2288"
+							     src="http://www.pi-lock.com/wp-content/uploads/2014/02/TopView-small.jpg"
+							     class="attachment-full wp-post-image" alt="TopView-small">
+
+							<div class="carousel-caption">
+								<h4>Front View</h4>
+
+								<p>Top view of version 1</p>
+							</div>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#cptbc_86" data-slide="prev"><span class="icon-prev"></span></a>
+					<a class="right carousel-control" href="#cptbc_86" data-slide="next"><span class="icon-next"></span></a>
+				</div>
+				<script type="text/javascript">
+					jQuery(document).ready(function () {
+						jQuery('#cptbc_86').carousel({
+							interval: 4000                });
+					});
+				</script>
+
+				<hr class="featurette-divider"/>
+				<div class="row featurette">
+					<div class="col-sm-6">
+						<h2 class="featurette-heading">Effortless Front-End Management <span class="text-muted">built with AngularJS + Bootstrap</span>
+						</h2>
+						<dl class="dl-horizontal">
+							<dt>Query</dt>
+							<dd>Door entries by user, door number, and more.</dd>
+							<dt>Monitor</dt>
+							<dd>Device temperature, CPU, RAM, and memory usage stats.</dd>
+							<dt>Configure</dt>
+							<dd>Set device network settings and information anywhere.</dd>
+							<dt>Manage</dt>
+							<dd>Employee permissions in a breeze.</dd>
+						</dl>
+					</div>
+					<div class="col-sm-6">
+						<img src="http://www.pi-lock.com/wp-content/uploads/2014/01/front-end@2x1.png"
+						     alt="front-end@2x" width="1614" height="1202" class="alignnone size-full wp-image-295"/>
+					</div>
+				</div>
+				<hr class="featurette-divider"/>
+				<div class="row featurette">
+					<div class="col-sm-6">
+						<img src="http://www.pi-lock.com/wp-content/uploads/2014/01/keypad@2x.png" alt="keypad@2x"
+						     width="1466" height="1166" class="alignnone size-full wp-image-297"/>
+					</div>
+					<div class="col-sm-6">
+						<h2 class="featurette-heading text-right">Built for Any Application <span class="text-muted">See for yourself.</span>
+						</h2>
+
+						<p class="lead text-right">Pi Lock can be used for <strong>any application</strong> and product.
+							Whether you want to use it for a door security system, or as a Kiosk to manage employee
+							expenditure in the company shop, or to simply open your garage door. Jump into the <a
+								href="http://pi-lock.com/software/source-code">source code</a> to find out what you want
+							to use it for.</p>
+						</p></div>
+				</div>
+				<hr class="featurette-divider"/>
+				<div class="row featurette">
+					<div class="col-sm-6">
+						<h2 class="featurette-heading">Add Extra Components <span class="text-muted">done.</span></h2>
+
+						<p class="lead text-right">With Pi Lock you can add any Arduino or Raspberry Pi compatible
+							sensor or component. Need a Temperature and Light reader?<span
+								class="text-muted">  Done.</span> Motion detector?<span
+								class="text-muted">  Done.</span> Just use the one of the component classes in the
+							github project and tailor it to your device, and it will be working in a jiffy.</p>
+						</p></div>
+					<div class="col-sm-6">
+						<img src="http://www.pi-lock.com/wp-content/uploads/2014/01/Insulated_Wires_And_Cables.jpg"
+						     alt="Wires" width="1681" height="1120" class="alignnone size-full wp-image-345"/>
+					</div>
+				</div>
+				<hr class="featurette-divider"/>
+				<div class="jumbotron home-jumbo">
+					<h2>Give it a try</h2>
+
+					<p>Please help improve Pi Lock. There is still a lot of room for improvement and with your help, we
+						can make it an awesome platform for creating enterprise-ready solutions.</p>
+
+					<p><a class="btn btn-lg btn-default btn-jumbo" href="https://github.com/pi-lock/pi/">Star me on
+						Github</a>
+				</div>
+				<hr class="featurette-divider"/>
+				<small style="text-align:center;">Designed, built and created by Paolo Bernasconi &#8211; Pi Lock ©
+				</small>
+				</p>
+				<div class="clearfix"></div>
+			</main>
+			<!-- /.main -->
+
+
+		</div>
+	</div>
+	<!-- /.content -->
+</div>
+<!-- /.wrap -->
+
+
+<footer class="content-info" role="contentinfo">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<section id="meta-3" class=" widget widget_meta"><h3 class="widget-title">Administration</h3>
+					<ul>
+						<li><a rel="nofollow" href="http://www.pi-lock.com/wp-login.php">Log in</a></li>
+						<li><a href="http://www.pi-lock.com/feed/" title="Syndicate this site using RSS 2.0">Entries
+							<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+						<li><a href="http://pi-lock.disqus.com/latest.rss"
+						       title="The latest comments to all posts in RSS">Comments <abbr
+							title="Really Simple Syndication">RSS</abbr></a></li>
+						<li><a href="https://wordpress.org/"
+						       title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="col-md-4">
+				<section id="text-3" class=" widget widget_text"><h3 class="widget-title">Contact Info</h3>
+
+					<div class="textwidget"></div>
+				</section>
+			</div>
+			<div class="col-md-4">
+				<section id="pages-2" class=" widget widget_pages"><h3 class="widget-title">Pi-Lock</h3>
+					<ul>
+						<li class="page_item page-item-300 page_item_has_children"><a
+							href="http://www.pi-lock.com/about/">About</a>
+							<ul class='children'>
+								<li class="page_item page-item-38"><a href="http://www.pi-lock.com/about/contact/">Contact</a>
+								</li>
+								<li class="page_item page-item-306"><a href="http://www.pi-lock.com/about/me/">Me</a>
+								</li>
+							</ul>
+						</li>
+						<li class="page_item page-item-100"><a href="http://www.pi-lock.com/blog/">Blog</a></li>
+						<li class="page_item page-item-13"><a href="http://www.pi-lock.com/discuss/">Discuss</a></li>
+						<li class="page_item page-item-9 current_page_item"><a href="http://www.pi-lock.com/">Home</a>
+						</li>
+						<li class="page_item page-item-331"><a href="http://www.pi-lock.com/main-back-end/">Main
+							Back-End</a></li>
+						<li class="page_item page-item-328"><a href="http://www.pi-lock.com/main-front-end/">Main
+							Front-End</a></li>
+						<li class="page_item page-item-7 page_item_has_children"><a
+							href="http://www.pi-lock.com/participate/">Participate</a>
+							<ul class='children'>
+								<li class="page_item page-item-117"><a
+									href="http://www.pi-lock.com/participate/assemble/">Assemble</a></li>
+								<li class="page_item page-item-336"><a
+									href="http://www.pi-lock.com/participate/overview/">Overview</a></li>
+								<li class="page_item page-item-115"><a
+									href="http://www.pi-lock.com/participate/purchase-parts/">Purchase The Parts</a>
+								</li>
+							</ul>
+						</li>
+						<li class="page_item page-item-323"><a href="http://www.pi-lock.com/rpi-back-end/">RPi
+							Back-End</a></li>
+						<li class="page_item page-item-319"><a href="http://www.pi-lock.com/rpi-front-end/">RPi Front
+							End</a></li>
+						<li class="page_item page-item-192 page_item_has_children"><a
+							href="http://www.pi-lock.com/software/">Software</a>
+							<ul class='children'>
+								<li class="page_item page-item-123"><a href="http://www.pi-lock.com/software/install/">Install</a>
+								</li>
+								<li class="page_item page-item-126"><a
+									href="http://www.pi-lock.com/software/run/">Run</a></li>
+								<li class="page_item page-item-189"><a
+									href="http://www.pi-lock.com/software/source-code/">Source Code</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<div id="footer-copyright">
+			<article class="container">
+				<div id="copyright-bar" class="col-lg-7">© 2014 Pi-Lock | Paolo Bernasconi</div>
+				<div id="footer_social_bar" class="col-lg-5">
+					<a href="https://www.facebook.com/paoloenricobernasconi" target="_blank" title="facebook">
+						<span class="icon el-icon-facebook"></span>
+					</a>
+					<a href="https://github.com/pbernasconi/piLock" target="_blank" title="github">
+						<span class="icon el-icon-github"></span>
+					</a>
+					<a href="http://ch.linkedin.com/in/paolobernasconi?trk=pub-pbmap" target="_blank" title="linkedin">
+						<span class="icon el-icon-linkedin"></span>
+					</a>
+				</div>
+			</article>
+		</div>
+	</div>
+	</div>
+</footer>
+
+</div>
+
+
+<style>.cpm-map img {
+	max-width: none;
+	box-shadow: none;
+}</style>
+<script type='text/javascript'
+        src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/main.js'></script>
+<script type='text/javascript'
+        src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/retina.js'></script>
+<script type='text/javascript'
+        src='http://www.pi-lock.com/wp-content/themes/shoestrap-3/assets/js/vendor/jquery.fitvids.js'></script>
+
+</body>
 </html>
