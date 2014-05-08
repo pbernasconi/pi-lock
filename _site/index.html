@@ -23,19 +23,31 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand logo" href="/pi-lock/">
+			<a class="navbar-brand" href="/pi-lock/">
 				<img class="site-logo" src="/pi-lock/assets/images/Logo1.png">
 			</a>
 		</div>
 
-
 		<div class="nav-main navbar-collapse collapse ">
-			<ul class="nav navbar-nav pull-right ">
+			<!--<ul class="nav navbar-nav pull-right ">
 				<li><a class="hardware-nav nav-link" href="/pi-lock/hardware/overview.html">Hardware</a></li>
 				<li><a class="software-nav nav-link" href="/pi-lock/software/overview.html">Software</a></li>
 				<li><a class="frontend-nav nav-link" href="/pi-lock/frontend/overview.html">Front End</a></li>
 			</ul>
+			-->
+			<ul class="nav navbar-nav pull-right ">
+				
+				<li><a class="software-nav nav-link" href="/pi-lock/software/overview.html">Software</a></li>
+				
+				
+				<li><a class="hardware-nav nav-link" href="/pi-lock/hardware/overview.html">Hardware</a></li>
+				
+				
+				<li><a class="frontend-nav nav-link" href="/pi-lock/frontend/overview.html">Front End</a></li>
+				
+			</ul>
 		</div>
+
 	</div>
 </nav>
 
@@ -47,12 +59,12 @@
 			<h3>A RFID solution for Access Control and Management</h3>
 		</div>
 
-		<div class="row home-header-buttons">
-			<div class="col-sm-6 text-center">
-				<button class="btn btn-lg  btn-inverse" href="hardware/hardware">Download Source Code</button>
+		<div class="row home-button-row">
+			<div class="col-sm-4 text-center col-sm-offset-2">
+				<button class="btn btn-lg btn-inverse btn-home" href="hardware/hardware">Download Source Code</button>
 			</div>
-			<div class="col-sm-6 text-center">
-				<button class="btn btn-lg btn-inverse" href="software/overview">Docs</button>
+			<div class="col-sm-4 text-center">
+				<button class="btn btn-lg btn-inverse btn-home" href="software/overview">Docs</button>
 			</div>
 		</div>
 	</div>
@@ -80,13 +92,13 @@
 <div class="container home-container">
 
 	<div class="desc-row jumbotron">
-		<p>Pi-Lock is an automated door Security System built around the Raspberry Pi. Using a RFID reader
-			and PIN entry system, access to buildings, departments and rooms is controlled in a secure,
+		<h5>Pi-Lock is an automated door Security System built around the Raspberry Pi.</h5>
+		<p>Using a RFID reader and PIN entry system, access to buildings, departments and rooms is controlled in a secure,
 			efficient, and cost-minimizing system.</p>
 	</div>
 
-	<div class="row featurette">
-		<div class="col-lg-5 col-lg-offset-1">
+	<div class="row featurette-row">
+		<div class="col-lg-5 col-lg-offset-1 featurette-content">
 			<h4>Easy Front-End Management</h4>
 
 			<p><strong>Query</strong>&nbsp; Door entries by user, door number, and more
@@ -101,9 +113,9 @@
 	</div>
 
 
-	<div class="row featurette">
+	<div class="row featurette-row">
 		<div class="col-lg-5 col-lg-offset-1"><img class="img-responsive" src="assets/images/keypad@2x.png"/></div>
-		<div class="col-lg-5">
+		<div class="col-lg-5 featurette-content">
 			<h4>Built for Any Application</h4>
 
 			<p>Pi Lock can be used for <strong>any application</strong> and product.
@@ -116,9 +128,9 @@
 	</div>
 
 
-	<div class="row featurette">
-		<div class="col-lg-5 col-lg-offset-1">
-			<h4 class="featurette-heading">Add Extra Components</h4>
+	<div class="row featurette-row">
+		<div class="col-lg-5 col-lg-offset-1 featurette-content">
+			<h4>Add Extra Components</h4>
 
 			<p>With Pi Lock you can add any Arduino or Raspberry Pi compatible
 				sensor or component. Need a Temperature and Light reader? Motion detector? Just use the one of the
@@ -126,8 +138,8 @@
 				github project and tailor it to your device, and it will be working in a jiffy.</p>
 		</div>
 		<div class="col-lg-5">
-			<img class="img-responsive"
-			     src="http://www.pi-lock.com/wp-content/uploads/2014/01/Insulated_Wires_And_Cables.jpg"/>
+			<img class="img-responsive img-rounded"
+			     src="assets/images/puzzle.png"/>
 		</div>
 	</div>
 

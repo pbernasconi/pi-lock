@@ -1,12 +1,13 @@
 
-.site-logo {
-    height: 25px;
-    width: 110px;
-}
-
 /***********************
 *****    Navbar   ******
 ************************/
+
+.site-logo {
+    height: 25px;
+    width: 110px;
+    margin-top: 10px;
+}
 
 .navbar {
     position: relative;
@@ -17,18 +18,14 @@
     border-radius: 0 !important;
 }
 
-.navbar-header {
-    padding-top: 20px;
-}
-
 
 .nav-link {
     padding-top: 25px !important;
-    color: #f1f1f1 !important;
+    color: #d1d1d1 !important;
     border-top: 3px solid transparent !important;
 }
 
-.nav-link:hover {
+.nav-link:hover , .active {
     color: white !important;
     border-top: 3px solid !important;
     border-top-color: #ffffff;
@@ -54,9 +51,14 @@
     text-shadow: #4d76af 4px 4px 0px;
 }
 
-.home-header-buttons {
-    margin-top: 30px;
+.home-button-row {
+    margin-top: 50px;
     margin-bottom: 40px;
+}
+
+.btn-home {
+    width: 220px;
+
 }
 
 .home-container {
@@ -119,6 +121,8 @@
     font-size: 12px;
 }
 
+
+
 /***********************
 ***    Description   ***
 ************************/
@@ -128,17 +132,25 @@
     background: white;
 }
 
+.desc-row h5 {
+    font-size: 25px;
+}
+
 
 
 /***********************
-*****    Main   ******
+***    Featurette   ****
 ************************/
 
-.featurette {
+.featurette-row {
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.featurette p {
+.featurette-row p {
     font-size: 15px;
+}
+
+.featurette-content {
+    vertical-align: middle;
 }
