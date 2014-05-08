@@ -1,19 +1,12 @@
-.header {
-    position: relative;
-    padding: 24px 0 0 0;
-    height: 200px;
-    z-index: 1000;
-    background-position: 0 -76px;
+
+.site-logo {
+    height: 25px;
+    width: 110px;
 }
-.horizontal-gradient {
-    background: #ecf0f1;
-    background: -moz-linear-gradient(left, #ecf0f1 0%, #4e8ef7 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ecf0f1), color-stop(100%, #4e8ef7));
-    background: -webkit-linear-gradient(left, #ecf0f1 0%, #4e8ef7 100%);
-    background: -o-linear-gradient(left, #ecf0f1 0%, #4e8ef7 100%);
-    background: -ms-linear-gradient(left, #ecf0f1 0%, #4e8ef7 100%);
-    background: linear-gradient(to right, #ecf0f1 0%, #4e8ef7 100%);
-}
+
+/***********************
+*****    Navbar   ******
+************************/
 
 .navbar {
     position: relative;
@@ -21,38 +14,102 @@
     min-height: 73px;
     margin-bottom: 0;
     border: 0;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
     border-radius: 0 !important;
 }
 
-.nav-container {
-    padding-top: 10px;
+.navbar-header {
+    padding-top: 20px;
 }
+
+
+.nav-link {
+    padding-top: 25px !important;
+    color: #f1f1f1 !important;
+    border-top: 3px solid transparent !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+    border-top: 3px solid !important;
+    border-top-color: #ffffff;
+}
+
+.horizontal-gradient {
+    background: #5C8AC8;
+}
+
+
+/***********************
+***    Home Header   ***
+************************/
 
 .home-header {
     padding-bottom: 20px;
+    color: white;
+    text-align: center;
 }
+
+.home-header h1 {
+    padding-top: 20px;
+    text-shadow: #4d76af 4px 4px 0px;
+}
+
+.home-header-buttons {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.home-container {
+    max-width: 1000px;
+}
+
+
+/***********************
+***    sub Header   ***
+************************/
+
+.sub-header {
+    color: white;
+    padding-bottom: 20px;
+}
+.sub-header  p {
+    color: #dfdfdf;
+    padding-bottom: 20px;
+}
+
+.sub-sub-header {
+    background:#d9eaff;
+}
+
+.sub-sub-header p {
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
+
+
+/***********************
+****    Utility   ******
+************************/
 
 .utility-bar {
     margin-top: -1px;
     position: relative;
     padding: 17px;
     width: 100%;
-    background: #2155aa;
-    background: -moz-linear-gradient(left, #2155aa 0%, #3e72c6 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #2155aa), color-stop(100%, #3e72c6));
-    background: -webkit-linear-gradient(left, #2155aa 0%, #3e72c6 100%);
-    background: -o-linear-gradient(left, #2155aa 0%, #3e72c6 100%);
-    background: -ms-linear-gradient(left, #2155aa 0%, #3e72c6 100%);
-    background: linear-gradient(to right, #2155aa 0%, #3e72c6 100%);
+    background: #d9eaff;
 }
 
 .social-row {
     margin: 7px 0 0 0;
-    font-family: "AvenirNextLTPro-UltLt", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    letter-spacing: -1px;
+
+}
+
+.social-item > a {
+    font-size: 15px;
+    color: #000000;
 }
 
 .social-row li {
@@ -60,4 +117,28 @@
     height: 27px;
     margin-right: 22px;
     font-size: 12px;
+}
+
+/***********************
+***    Description   ***
+************************/
+
+.desc-row {
+    text-align: center;
+    background: white;
+}
+
+
+
+/***********************
+*****    Main   ******
+************************/
+
+.featurette {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.featurette p {
+    font-size: 15px;
 }
