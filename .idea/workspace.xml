@@ -2,181 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f9d482c-56bf-4255-a1cb-b96e46e03137" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/base_scripts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_layouts/docs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hardware.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_layouts/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/software.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/sub_header.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/jekyll/update/2014/05/08/welcome-to-jekyll.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/params.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/flat-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/syntax.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/flat-ui-icons-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/flat-ui-icons-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/flat-ui-icons-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/flat-ui-icons-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-black.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-black.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-black.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-bold.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-bold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-bold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-bolditalic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-bolditalic.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-bolditalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-bolditalic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-italic.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-italic.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-italic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-italic.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-light.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-light.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-light.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/lato/lato-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/Logo1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/demo.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/docs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/flat-ui.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/button-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/caret.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/checkbox-and-radio.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/code.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/dropdown.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/footer.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/glyphicons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/input-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/input-icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/local-fonts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/login.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/pager.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/palette.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/progress-bars.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/scaffolding.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/select.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/share.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/slider.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/switch.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/tagsinput.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/thumbnails.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/tile.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/todo.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/type.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/typeahead.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/modules/video.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/spaces.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/less/variables.less" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/assets/css/bootstrap-theme.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/css/bootstrap.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/assets/css/bootstrap.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/css/flat-ui.css" afterPath="$PROJECT_DIR$/assets/css/flat-ui.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/css/main.css" afterPath="$PROJECT_DIR$/assets/css/main.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/css/syntax.css" afterPath="$PROJECT_DIR$/assets/css/syntax.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/flat-ui-icons-regular.eot" afterPath="$PROJECT_DIR$/assets/fonts/flat-ui-icons-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/flat-ui-icons-regular.svg" afterPath="$PROJECT_DIR$/assets/fonts/flat-ui-icons-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/flat-ui-icons-regular.ttf" afterPath="$PROJECT_DIR$/assets/fonts/flat-ui-icons-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/flat-ui-icons-regular.woff" afterPath="$PROJECT_DIR$/assets/fonts/flat-ui-icons-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-black.eot" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-black.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-black.svg" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-black.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-black.ttf" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-black.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-black.woff" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-black.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-bold.eot" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-bold.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-bold.svg" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-bold.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-bold.ttf" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-bold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-bold.woff" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-bold.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-bolditalic.eot" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-bolditalic.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-bolditalic.svg" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-bolditalic.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-bolditalic.ttf" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-bolditalic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-bolditalic.woff" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-bolditalic.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-italic.eot" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-italic.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-italic.svg" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-italic.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-italic.ttf" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-italic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-italic.woff" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-italic.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-light.eot" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-light.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-light.svg" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-light.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-light.ttf" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-light.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-light.woff" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-light.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-regular.eot" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-regular.svg" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-regular.ttf" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/fonts/lato/lato-regular.woff" afterPath="$PROJECT_DIR$/assets/fonts/lato/lato-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/images/Logo1.png" afterPath="$PROJECT_DIR$/assets/images/Logo1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/js/bootstrap.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/demo.less" afterPath="$PROJECT_DIR$/assets/less/demo.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/docs.less" afterPath="$PROJECT_DIR$/assets/less/docs.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/flat-ui.less" afterPath="$PROJECT_DIR$/assets/less/flat-ui.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/mixins.less" afterPath="$PROJECT_DIR$/assets/less/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/button-groups.less" afterPath="$PROJECT_DIR$/assets/less/modules/button-groups.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/buttons.less" afterPath="$PROJECT_DIR$/assets/less/modules/buttons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/caret.less" afterPath="$PROJECT_DIR$/assets/less/modules/caret.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/checkbox-and-radio.less" afterPath="$PROJECT_DIR$/assets/less/modules/checkbox-and-radio.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/code.less" afterPath="$PROJECT_DIR$/assets/less/modules/code.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/dropdown.less" afterPath="$PROJECT_DIR$/assets/less/modules/dropdown.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/footer.less" afterPath="$PROJECT_DIR$/assets/less/modules/footer.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/forms.less" afterPath="$PROJECT_DIR$/assets/less/modules/forms.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/glyphicons.less" afterPath="$PROJECT_DIR$/assets/less/modules/glyphicons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/input-groups.less" afterPath="$PROJECT_DIR$/assets/less/modules/input-groups.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/input-icons.less" afterPath="$PROJECT_DIR$/assets/less/modules/input-icons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/local-fonts.less" afterPath="$PROJECT_DIR$/assets/less/modules/local-fonts.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/login.less" afterPath="$PROJECT_DIR$/assets/less/modules/login.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/navbar.less" afterPath="$PROJECT_DIR$/assets/less/modules/navbar.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/pager.less" afterPath="$PROJECT_DIR$/assets/less/modules/pager.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/pagination.less" afterPath="$PROJECT_DIR$/assets/less/modules/pagination.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/palette.less" afterPath="$PROJECT_DIR$/assets/less/modules/palette.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/progress-bars.less" afterPath="$PROJECT_DIR$/assets/less/modules/progress-bars.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/scaffolding.less" afterPath="$PROJECT_DIR$/assets/less/modules/scaffolding.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/select.less" afterPath="$PROJECT_DIR$/assets/less/modules/select.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/share.less" afterPath="$PROJECT_DIR$/assets/less/modules/share.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/slider.less" afterPath="$PROJECT_DIR$/assets/less/modules/slider.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/switch.less" afterPath="$PROJECT_DIR$/assets/less/modules/switch.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/tagsinput.less" afterPath="$PROJECT_DIR$/assets/less/modules/tagsinput.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/thumbnails.less" afterPath="$PROJECT_DIR$/assets/less/modules/thumbnails.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/tile.less" afterPath="$PROJECT_DIR$/assets/less/modules/tile.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/todo.less" afterPath="$PROJECT_DIR$/assets/less/modules/todo.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/tooltip.less" afterPath="$PROJECT_DIR$/assets/less/modules/tooltip.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/type.less" afterPath="$PROJECT_DIR$/assets/less/modules/type.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/typeahead.less" afterPath="$PROJECT_DIR$/assets/less/modules/typeahead.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/modules/video.less" afterPath="$PROJECT_DIR$/assets/less/modules/video.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/spaces.less" afterPath="$PROJECT_DIR$/assets/less/spaces.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/less/variables.less" afterPath="$PROJECT_DIR$/assets/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/foot.html" afterPath="$PROJECT_DIR$/_includes/foot.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/nav.html" afterPath="$PROJECT_DIR$/_includes/nav.html" />
     </list>
     <ignored path="pi-lock.iws" />
@@ -265,16 +90,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sub_header.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/sub_header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
-              <caret line="4" column="133" selection-start-line="4" selection-start-column="133" selection-end-line="4" selection-end-column="133" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/home.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -285,11 +100,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="_config.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="head.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/head.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="270">
-              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="51" />
+            <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="270">
+              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -298,8 +123,8 @@
       <file leaf-file-name="nav.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2992021" vertical-offset="0" max-vertical-offset="752">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.30800822" vertical-offset="0" max-vertical-offset="487">
+              <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -318,8 +143,8 @@
       <file leaf-file-name="software.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/software.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
-              <caret line="4" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="195">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -328,8 +153,8 @@
       <file leaf-file-name="docs.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/docs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.041666" vertical-offset="1871" max-vertical-offset="2610">
-              <caret line="168" column="23" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
+            <state vertical-scroll-proportion="-82.5" vertical-offset="0" max-vertical-offset="2610">
+              <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -362,7 +187,6 @@
         <option value="$PROJECT_DIR$/_layouts/nav.html" />
         <option value="$PROJECT_DIR$/_layouts/head.html" />
         <option value="$PROJECT_DIR$/index3.html" />
-        <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/_includes/sub-header.html" />
         <option value="$PROJECT_DIR$/hardware/hardware.html" />
         <option value="$PROJECT_DIR$/_includes/foot.html" />
@@ -372,6 +196,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/software.html" />
         <option value="$PROJECT_DIR$/frontend.html" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/_includes/nav.html" />
       </list>
     </option>
@@ -751,7 +577,7 @@
       <updated>1399516564822</updated>
       <workItem from="1399516565347" duration="4582000" />
       <workItem from="1399521443915" duration="770000" />
-      <workItem from="1399523951202" duration="4182000" />
+      <workItem from="1399523951202" duration="4530000" />
     </task>
     <task id="LOCAL-00001" summary="Add Bootstrap files">
       <created>1399517655631</created>
@@ -785,17 +611,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9534000" />
+    <option name="totallyTimeSpent" value="9882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329602" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -810,7 +636,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1702432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1702432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -955,14 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="511">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/base_scripts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
@@ -995,14 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hardware.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
@@ -1019,21 +829,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/software.html">
+    <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
-          <caret line="4" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/docs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.041666" vertical-offset="1871" max-vertical-offset="2610">
-          <caret line="168" column="23" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,18 +845,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/params.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="763">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/software.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="195">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/docs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-82.5" vertical-offset="0" max-vertical-offset="2610">
+          <caret line="132" column="25" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/head.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="270">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="51" />
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2992021" vertical-offset="0" max-vertical-offset="752">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.30800822" vertical-offset="0" max-vertical-offset="487">
+          <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
           <folding />
         </state>
       </provider>
