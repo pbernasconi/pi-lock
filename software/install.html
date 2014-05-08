@@ -1,0 +1,43 @@
+---
+layout: docs
+title: Software
+header_title: Software
+header_sub_title: A look into the software that runs Pi-Lock
+side_menu: software
+---
+
+<div class="col-md-10 col-sm-9 main-content">
+
+	<h3 id="libraries">Python Libraries</h3>
+	<p>Installing python libraries is very simple, and doesn’t even require complicated shell scripting. A Little basic command-line scripting experience can’t hurt though.</p>
+
+	<p>If you haven’t already installed Python SetupTools then I highly recommend you do that first:</p>
+
+	<code>sudo apt-get install python-setuptools</code>
+
+	<p>Next you can update the Raspberry Pi software:</p>
+
+	<code>sudo apt-get update</code>
+	<p>Next you can move on to installing the python libraries individually, line by line:</p>
+
+
+	<code>sudo apt-get install git-core
+		sudo apt-get install python-dev
+		sudo apt-get install python-pip
+		sudo easy_install -U pyserial
+		sudo easy_install -U RPIO
+		sudo easy_install -U cherrypy
+		sudo easy_install psutil
+	</code>
+
+	<h3 id="github">Github Code</h3>
+	<p>By installing the code from Github, you can easily run the RFID reading routine, and have your Pi-Lock up and running in no time.The files on Github can be found at the following link: github.com/pi-lock/pi</p>
+
+
+	<button>Download Code from Github</button>
+
+	<p>In order to install this without going through a web-browser, simple type into your shell command-line:</p>
+
+	<button>git clone https://github.com/pi-lock/pi</button>
+
+</div>
