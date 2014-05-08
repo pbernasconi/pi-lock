@@ -7,14 +7,15 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 	<link rel="stylesheet" href="/pi-lock/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/pi-lock/assets/css/flat-ui.css">
+	<link rel="stylesheet" href="/pi-lock/assets/css/custom.css">
 </head>
 <body>
 
 
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default horizontal-gradient" role="navigation">
 
-	<div class="container">
+	<div class="container nav-container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-main, .nav-extras">
 				<span class="sr-only">Toggle navigation</span>
@@ -29,7 +30,7 @@
 		</div>
 
 
-		<div class="nav-main navbar-collapse collapse">
+		<div class="nav-main navbar-collapse collapse ">
 			<ul class="nav navbar-nav pull-right ">
 				<li><a class="hardware-nav nav-link" href="/pi-lock/hardware.html">Hardware</a></li>
 				<li><a class="software-nav nav-link" href="/pi-lock/software/overview.html">Software</a></li>
@@ -39,8 +40,8 @@
 	</div>
 </nav>
 
-<div class="before-main-wrapper">
-	<div class="container home-header">
+<div class="horizontal-gradient home-header">
+	<div class="container">
 		<div class="row first-row text-center">
 			<h1> Pi Lock </h1>
 
@@ -60,6 +61,28 @@
 				<a class="btn btn-lg btn-default btn-home"
 				   href="https://www.pi-lock.com/participate/purchase-parts/">Purchase the Parts</a>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="utility-bar">
+	<div class="container">
+		<div class="row">
+			<ul class="social-row ionic col-md-7">
+				<li><a href="https://github.com/driftyco/ionic" target="_blank"><i class="ion-social-github"></i> <span
+					id="gh-stargazers">5,225</span> Stars</a></li>
+				<li><a href="https://github.com/driftyco/ionic" target="_blank"><i class="ion-fork-repo"></i> <span
+					id="gh-forks">589</span> Forks</a></li>
+				<li><a href="https://twitter.com/IonicFramework" target="_blank"><i class="ion-social-twitter"></i>
+					<span id="tw-followers">5,261</span> Followers</a></li>
+			</ul>
+			<form action="http://codiqa.createsend.com/t/t/s/jytylh/" method="post" class="input-group col-md-5">
+				<input name="cm-jytylh-jytylh" class="form-control" type="email"
+				       placeholder="Enter your email for the latest ionic news" required="">
+            <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">Subscribe</button>
+        </span>
+			</form>
 		</div>
 	</div>
 </div>
@@ -123,7 +146,8 @@
 			<img src="http://www.pi-lock.com/wp-content/uploads/2014/01/keypad@2x.png"/>
 		</div>
 		<div class="col-sm-6">
-			<h2 class="featurette-heading text-right">Built for Any Application <span class="text-muted">See for yourself.</span></h2>
+			<h2 class="featurette-heading text-right">Built for Any Application <span class="text-muted">See for yourself.</span>
+			</h2>
 
 			<p class="lead text-right">Pi Lock can be used for <strong>any application</strong> and product.
 				Whether you want to use it for a door security system, or as a Kiosk to manage employee
@@ -145,7 +169,7 @@
 					class="text-muted">  Done.</span> Motion detector?<span
 					class="text-muted">  Done.</span> Just use the one of the component classes in the
 				github project and tailor it to your device, and it will be working in a jiffy.</p>
-			</div>
+		</div>
 		<div class="col-sm-6">
 			<img src="http://www.pi-lock.com/wp-content/uploads/2014/01/Insulated_Wires_And_Cables.jpg"/>
 		</div>
@@ -155,6 +179,7 @@
 
 	<div class="jumbotron home-jumbo">
 		<h2>Give it a try</h2>
+
 		<p>Please help improve Pi Lock. There is still a lot of room for improvement and with your help, we
 			can make it an awesome platform for creating enterprise-ready solutions.</p>
 

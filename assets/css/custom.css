@@ -1,0 +1,63 @@
+.header {
+    position: relative;
+    padding: 24px 0 0 0;
+    height: 200px;
+    z-index: 1000;
+    background-position: 0 -76px;
+}
+.horizontal-gradient {
+    background: #ecf0f1;
+    background: -moz-linear-gradient(left, #ecf0f1 0%, #4e8ef7 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ecf0f1), color-stop(100%, #4e8ef7));
+    background: -webkit-linear-gradient(left, #ecf0f1 0%, #4e8ef7 100%);
+    background: -o-linear-gradient(left, #ecf0f1 0%, #4e8ef7 100%);
+    background: -ms-linear-gradient(left, #ecf0f1 0%, #4e8ef7 100%);
+    background: linear-gradient(to right, #ecf0f1 0%, #4e8ef7 100%);
+}
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+    min-height: 73px;
+    margin-bottom: 0;
+    border: 0;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+.nav-container {
+    padding-top: 10px;
+}
+
+.home-header {
+    padding-bottom: 20px;
+}
+
+.utility-bar {
+    margin-top: -1px;
+    position: relative;
+    padding: 17px;
+    width: 100%;
+    background: #2155aa;
+    background: -moz-linear-gradient(left, #2155aa 0%, #3e72c6 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #2155aa), color-stop(100%, #3e72c6));
+    background: -webkit-linear-gradient(left, #2155aa 0%, #3e72c6 100%);
+    background: -o-linear-gradient(left, #2155aa 0%, #3e72c6 100%);
+    background: -ms-linear-gradient(left, #2155aa 0%, #3e72c6 100%);
+    background: linear-gradient(to right, #2155aa 0%, #3e72c6 100%);
+}
+
+.social-row {
+    margin: 7px 0 0 0;
+    font-family: "AvenirNextLTPro-UltLt", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.social-row li {
+    display: inline-block;
+    height: 27px;
+    margin-right: 22px;
+    font-size: 12px;
+}
