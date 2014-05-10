@@ -9,44 +9,17 @@ var ionicSite = function() {
     devicePreview,
     defaultScreen;
 
-  window.rAF = (function(){
-    return  window.requestAnimationFrame       ||
-      window.webkitRequestAnimationFrame ||
-      window.mozRequestAnimationFrame    ||
-      function( callback ){
-        window.setTimeout(callback, 16);
-      };
-  })();
-
-  /* Header menu toggle for mobile */
-  $("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $(this).toggleClass("active");
-  });
-
-  // smooth scroll
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        smoothScrollingTo = '#' + target.attr('id');
-        $('html,body').animate({ scrollTop: target.offset().top }, 100, 'swing',
-          function() {
-            if(docContent) {
-              previewSection(smoothScrollingTo);
-            }
-            smoothScrollingTo = undefined;
-          });
-        return false;
-      }
-    }
-  });
 
   // left menu link highlight
   var leftMenu = $('.left-menu');
   var activeLink = leftMenu.find('[href="' + window.location.pathname + '"]');
+  activeLink.parents('ul').addClass('active-menu');
   activeLink.parents('li').addClass("active");
+
+
+  console.log(activeLink);
+
+
 
   leftMenu.find('.api-section').click(function(){
     if( $(this).attr('href') == '#' ) {
@@ -57,7 +30,6 @@ var ionicSite = function() {
   });
 
 
-  /* Fixed left menu */
   (function() {
     var activeId;
     fixedMenu = $('.docked-menu');
@@ -172,107 +144,6 @@ var ionicSite = function() {
     }
   })();
 
-  // initDevicePreview
-  (function() {
-    /* Fixed device preview on the docs page */
-    devicePreview = $('.device-preview');
-    if(devicePreview.length) {
-      var orgDeviceTop = devicePreview.offset().top;
 
-      function onScroll() {
-        if($(window).scrollTop() > orgDeviceTop) {
-          if( !devicePreview.hasClass('fixed-preview') ) {
-            devicePreview
-              .css({
-                left: Math.round(devicePreview.offset().left) + 'px'
-              })
-              .addClass("fixed-preview");
-          }
-        } else {
-          if( devicePreview.hasClass('fixed-preview') ) {
-            devicePreview
-              .removeClass("fixed-preview")
-              .css({
-                left: 'auto'
-              });
-          }
-        }
-
-      }
-      $(window).resize(function(){
-        devicePreview
-          .removeClass("fixed-preview")
-          .css({
-            left: 'auto'
-          });
-        onScroll();
-      });
-      $(window).scroll(governScroll);
-
-      var scrollGovernor;
-      function governScroll() {
-        clearTimeout(scrollGovernor);
-        scrollGovernor = setTimeout(onScroll, 15);
-      }
-      onScroll();
-
-      var firstSection = docContent.find('.docs-section').first();
-      if(firstSection.length) {
-        previewSection( '#' + firstSection[0].id, true );
-      }
-
-    }
-  })();
-
-
-  function previewSection(id) {
-    var activeSection = $(id);
-    if(!activeSection.length || !devicePreview) return;
-
-    var title = activeSection.find('h1,h2,h3').first();
-    var newTitle = "Ionic Components";
-    activeId = activeSection.attr('id');
-    if(title.length) {
-      newTitle = title.text() + " - " + newTitle;
-    }
-    document.title = newTitle;
-
-    docContent.find('.active').removeClass('active');
-    activeSection.addClass("active");
-
-    devicePreview.find('.active-preview').removeClass('active-preview');
-    var docExample = activeSection.find('.doc-example');
-    if( docExample.length ) {
-      // this
-      var exampleId = 'example-' + activeId;
-      var examplePreview = $('#' + exampleId);
-      if(examplePreview.length) {
-        // preview has already been added
-        window.rAF(function(){
-          examplePreview.addClass('active-preview');
-        });
-      } else if(devicePreview) {
-        // create a new example preview
-        devicePreview.append( '<div id="' + exampleId + '" class="ionic-body">' + docExample.html() + '</div>' );
-        window.rAF(function(){
-          $('#' + exampleId)
-            .addClass('active-preview')
-            .find('a').click(function(){
-              return false;
-            });
-        });
-      }
-
-    } else {
-      window.rAF(function(){
-        if(!defaultScreen) {
-          defaultScreen = devicePreview.find('.default-screen');
-        }
-        defaultScreen.addClass('active-preview');
-      });
-    }
-  }
-
-  console.log('it works!');
 
 }();

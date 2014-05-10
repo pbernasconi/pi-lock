@@ -70,7 +70,7 @@
 
 
 <div class="container content-container">
-	<div class="row">
+	<div class="row docs-row">
 		<div class="col-md-2 col-sm-3 aside-menu">
 			<div class="docked-menu" id="sidebar">
 
@@ -78,29 +78,30 @@
 					<li class="menu-title"><a href="/pi-lock/software/overview.html">Overview</a></li>
 				</ul>
 
+
 				<ul class="nav left-menu">
 					<li class="menu-title"><a href="/pi-lock/software/install.html">Install</a></li>
 
-					<li><a href="/pi-lock/software/install.html/#libraries">Python Libraries</a></li>
-					<li><a href="/pi-lock/software/install.html/#github">Github</a></li>
+					<li><a href="#libraries">Python Libraries</a></li>
+					<li><a href="#github">Github</a></li>
 				</ul>
+
 
 
 				<ul class="nav left-menu">
 					<li class="menu-title"><a href="/pi-lock/software/code.html">Source Code</a></li>
-					<li><a href="/pi-lock/software/code.html">Header</a>
-						<ul style="display: none;">
-							<li><a href="/pi-lock/software/code.html">Sub Header</a></li>
-						</ul>
-					</li>
-					<li><a href="/pi-lock/software/code.html">Footer</a></li>
-					<li><a href="/pi-lock/software/code.html">Buttons</a>
+					<li><a href="#read">Read RFID</a></li>
+					<li><a href="#led">LED</a></li>
+					<li><a href="#check">Check</a></li>
+					<li><a href="#classes">Classes</a>
 						<ul>
-							<li><a href="/pi-lock/software/code.html">Block</a></li>
-							<li><a href="/pi-lock/software/code.html">Full Width</a></li>
+							<li><a href="#class-log-entry">Log in DB</a></li>
+							<li><a href="#class-search-db">Search DB</a></li>
+							<li><a href="#class-log-error">Full Width</a></li>
 						</ul>
 					</li>
 				</ul>
+
 
 
 				<ul class="nav left-menu">
@@ -113,6 +114,73 @@
 		</div>
 
 
+<div class="col-md-10 col-sm-9 main-content">
+	<h1>Start Building with Ionic!</h1>
+
+	<p class="subheading">Jump into our docs where you'll find resources that teach you how to use Ionic, and reference documentation for all the moving parts.</p>
+
+	<div class="row docs-home-row">
+		<div class="col-sm-4">
+			<a href="/docs/overview/"><img src="/img/docs/symbols/docs-overview-symbol@2x.png" width="170" height="140"></a>
+			<h3><a href="/docs/overview/">Overview</a></h3>
+			<p>Learn everything you need to know to get up and running with the framework.</p>
+		</div>
+
+		<div class="col-sm-4">
+			<a href="/docs/components/"><img src="/img/docs/symbols/docs-components-symbol@2x.png" width="170" height="140"></a>
+			<h3><a href="/docs/components/">CSS Components</a></h3>
+			<p>A comprehensive list of our CSS mobile components. Everything you’d need.</p>
+		</div>
+
+		<div class="col-sm-4">
+			<a href="/docs/api/"><img src="/img/docs/symbols/docs-controllers-symbol@2x.png" width="170" height="140"></a>
+			<h3><a href="/docs/api/">JavaScript</a></h3>
+			<p>Explore our API docs for  information on the Controllers and Javascript utilities.</p>
+		</div>
+	</div>
+
+
+	<div class="row docs-home-row">
+
+		<div class="col-sm-4">
+			<a href="/docs/guide/"><img src="/img/docs/symbols/docs-book-symbol@2x.png" width="170" height="140"></a>
+			<h3><a href="/docs/guide/">The Ionic Book</a></h3>
+			<p>A mini-book written to help you get familiar with the Ionic Framework.</p>
+		</div>
+
+		<div class="col-sm-4">
+			<a href="http://ionicons.com/"><img src="/img/docs/symbols/docs-ionicons-symbol@2x.png" width="170" height="140"></a>
+			<h3><a href="http://ionicons.com/">Ionicons</a></h3>
+			<p>Over 500 custom designed font icons MIT licensed &amp; ready to use with ionic. </p>
+		</div>
+		<div class="col-sm-4">
+			<a href="/html5-input-types/"><img src="/img/docs/symbols/docs-inputs-symbol@2x.png" width="170" height="140"></a>
+			<h3><a href="/html5-input-types/">HTML5 Input Types</a></h3>
+			<p>How and when to use the many mobile input types in your app.</p>
+		</div>
+	</div>
+	<!-- end row 2 -->
+
+
+	<div class="row docs-home-row">
+
+		<div class="col-sm-4">
+			<a href="http://forum.ionicframework.com/"><img src="/img/docs/symbols/docs-forum-symbol@2x.png" width="170" height="140"></a>
+			<h3><a href="http://forum.ionicframework.com/">Community Forum</a></h3>
+			<p>Drop by and say Hi. Ask a question or share something interesting.</p>
+		</div>
+
+		<div class="col-sm-4">
+			<a href="/examples/"><img src="/img/docs/symbols/docs-demos-symbol@2x.png" width="170" height="140"></a>
+			<h3><a href="/examples/">Demos</a></h3>
+			<p>Check out some real life demos, examples and templates built on Ionic.</p>
+		</div>
+	</div>
+	<!-- end row 3 -->
+
+</div>
+
+
 </div>
 </div>
 
@@ -123,38 +191,23 @@
 
 </body>
 <footer class="footer">
+	<div class="container">
+		<p class="authors">
+			Created by <a href="https://twitter.com/pbernasconi"> @ Paolo Bernasconi</a>
+		</p>
 
-	<div class="newsletter row">
+			<a href="/docs/#license">MIT</a>. Docs under <a href="https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)">Apache 2</a>.
 
-		<div class="col-sm-7">
-			<div class="newsletter-text">Stay in the loop with ionic!</div>
-			<div class="sign-up">Sign up to receive emails on updates, features, and news on the framework.</div>
-		</div>
-
-		<form action="http://codiqa.createsend.com/t/t/s/jytylh/" method="post" class="input-group col-sm-5">
-			<input id="fieldEmail" name="cm-jytylh-jytylh" class="form-control" type="email" placeholder="Email" required />
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="submit">Subscribe</button>
-      </span>
-		</form>
-
+		<nav class="base-links">
+			<a href="/docs/">Docs</a>
+			&#183; <a href="/blog/">Blog</a>
+			&#183; <a href="/present-ionic/">Present Ionic</a>
+			&#183; <a href="http://forum.ionicframework.com/">Forum</a>
+			&#183; <a href="/contribute/">Contribute</a>
+			&#183; <a href="http://ionicons.com/">Ionicons</a>
+			&#183; <a href="https://github.com/driftyco/ionic">Github</a>
+			&#183; <a href="/contribute/#issues">Issues</a>
+			&#183; <a href="/jobs/">Jobs</a>
+		</nav>
 	</div>
-
-	<p class="authors">
-		Created by <a href="https://twitter.com/maxlynch">@maxlynch</a>,
-		<a href="https://twitter.com/adamdbradley">@adamdbradley</a>, and
-		<a href="https://twitter.com/benjsperry">@benjsperry</a>. Code licensed under
-		<a href="/docs/#license">MIT</a>. Docs under <a href="https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)">Apache 2</a>.
-	</p>
-	<nav class="base-links">
-		<a href="/docs/">Docs</a>
-		&#183; <a href="/blog/">Blog</a>
-		&#183; <a href="/present-ionic/">Present Ionic</a>
-		&#183; <a href="http://forum.ionicframework.com/">Forum</a>
-		&#183; <a href="/contribute/">Contribute</a>
-		&#183; <a href="http://ionicons.com/">Ionicons</a>
-		&#183; <a href="https://github.com/driftyco/ionic">Github</a>
-		&#183; <a href="/contribute/#issues">Issues</a>
-		&#183; <a href="/jobs/">Jobs</a>
-	</nav>
 </footer>

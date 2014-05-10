@@ -70,7 +70,7 @@
 
 
 <div class="container content-container">
-	<div class="row">
+	<div class="row docs-row">
 		<div class="col-md-2 col-sm-3 aside-menu">
 			<div class="docked-menu" id="sidebar">
 
@@ -78,29 +78,30 @@
 					<li class="menu-title"><a href="/pi-lock/software/overview.html">Overview</a></li>
 				</ul>
 
+
 				<ul class="nav left-menu">
 					<li class="menu-title"><a href="/pi-lock/software/install.html">Install</a></li>
 
-					<li><a href="/pi-lock/software/install.html/#libraries">Python Libraries</a></li>
-					<li><a href="/pi-lock/software/install.html/#github">Github</a></li>
+					<li><a href="#libraries">Python Libraries</a></li>
+					<li><a href="#github">Github</a></li>
 				</ul>
+
 
 
 				<ul class="nav left-menu">
 					<li class="menu-title"><a href="/pi-lock/software/code.html">Source Code</a></li>
-					<li><a href="/pi-lock/software/code.html">Header</a>
-						<ul style="display: none;">
-							<li><a href="/pi-lock/software/code.html">Sub Header</a></li>
-						</ul>
-					</li>
-					<li><a href="/pi-lock/software/code.html">Footer</a></li>
-					<li><a href="/pi-lock/software/code.html">Buttons</a>
+					<li><a href="#read">Read RFID</a></li>
+					<li><a href="#led">LED</a></li>
+					<li><a href="#check">Check</a></li>
+					<li><a href="#classes">Classes</a>
 						<ul>
-							<li><a href="/pi-lock/software/code.html">Block</a></li>
-							<li><a href="/pi-lock/software/code.html">Full Width</a></li>
+							<li><a href="#class-log-entry">Log in DB</a></li>
+							<li><a href="#class-search-db">Search DB</a></li>
+							<li><a href="#class-log-error">Full Width</a></li>
 						</ul>
 					</li>
 				</ul>
+
 
 
 				<ul class="nav left-menu">
@@ -113,6 +114,43 @@
 		</div>
 
 
+<div class="col-md-10 col-sm-9 main-content">
+
+	<h3 id="libraries">Python Libraries</h3>
+	<p>Installing python libraries is very simple, and doesn’t even require complicated shell scripting. A Little basic command-line scripting experience can’t hurt though.</p>
+
+	<p>If you haven’t already installed Python SetupTools then I highly recommend you do that first:</p>
+
+	<code>sudo apt-get install python-setuptools</code>
+
+	<p>Next you can update the Raspberry Pi software:</p>
+
+	<code>sudo apt-get update</code>
+	<p>Next you can move on to installing the python libraries individually, line by line:</p>
+
+
+	<code>sudo apt-get install git-core
+		sudo apt-get install python-dev
+		sudo apt-get install python-pip
+		sudo easy_install -U pyserial
+		sudo easy_install -U RPIO
+		sudo easy_install -U cherrypy
+		sudo easy_install psutil
+	</code>
+
+	<h3 id="github">Github Code</h3>
+	<p>By installing the code from Github, you can easily run the RFID reading routine, and have your Pi-Lock up and running in no time.The files on Github can be found at the following link: github.com/pi-lock/pi</p>
+
+
+	<button>Download Code from Github</button>
+
+	<p>In order to install this without going through a web-browser, simple type into your shell command-line:</p>
+
+	<button>git clone https://github.com/pi-lock/pi</button>
+
+</div>
+
+
 </div>
 </div>
 
@@ -123,38 +161,23 @@
 
 </body>
 <footer class="footer">
+	<div class="container">
+		<p class="authors">
+			Created by <a href="https://twitter.com/pbernasconi"> @ Paolo Bernasconi</a>
+		</p>
 
-	<div class="newsletter row">
+			<a href="/docs/#license">MIT</a>. Docs under <a href="https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)">Apache 2</a>.
 
-		<div class="col-sm-7">
-			<div class="newsletter-text">Stay in the loop with ionic!</div>
-			<div class="sign-up">Sign up to receive emails on updates, features, and news on the framework.</div>
-		</div>
-
-		<form action="http://codiqa.createsend.com/t/t/s/jytylh/" method="post" class="input-group col-sm-5">
-			<input id="fieldEmail" name="cm-jytylh-jytylh" class="form-control" type="email" placeholder="Email" required />
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="submit">Subscribe</button>
-      </span>
-		</form>
-
+		<nav class="base-links">
+			<a href="/docs/">Docs</a>
+			&#183; <a href="/blog/">Blog</a>
+			&#183; <a href="/present-ionic/">Present Ionic</a>
+			&#183; <a href="http://forum.ionicframework.com/">Forum</a>
+			&#183; <a href="/contribute/">Contribute</a>
+			&#183; <a href="http://ionicons.com/">Ionicons</a>
+			&#183; <a href="https://github.com/driftyco/ionic">Github</a>
+			&#183; <a href="/contribute/#issues">Issues</a>
+			&#183; <a href="/jobs/">Jobs</a>
+		</nav>
 	</div>
-
-	<p class="authors">
-		Created by <a href="https://twitter.com/maxlynch">@maxlynch</a>,
-		<a href="https://twitter.com/adamdbradley">@adamdbradley</a>, and
-		<a href="https://twitter.com/benjsperry">@benjsperry</a>. Code licensed under
-		<a href="/docs/#license">MIT</a>. Docs under <a href="https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)">Apache 2</a>.
-	</p>
-	<nav class="base-links">
-		<a href="/docs/">Docs</a>
-		&#183; <a href="/blog/">Blog</a>
-		&#183; <a href="/present-ionic/">Present Ionic</a>
-		&#183; <a href="http://forum.ionicframework.com/">Forum</a>
-		&#183; <a href="/contribute/">Contribute</a>
-		&#183; <a href="http://ionicons.com/">Ionicons</a>
-		&#183; <a href="https://github.com/driftyco/ionic">Github</a>
-		&#183; <a href="/contribute/#issues">Issues</a>
-		&#183; <a href="/jobs/">Jobs</a>
-	</nav>
 </footer>

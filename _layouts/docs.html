@@ -7,10 +7,10 @@
 {% if page.side_menu == 'software' %}{% include sidemenu_software.html %}
 {% elsif page.side_menu == 'hardware'%}{% include sidemenu_hardware.html %}
 {% elsif page.side_menu == 'frontend'%}{% include sidemenu_frontend.html %}
-{% else %}
+{% endif %}
 
 {{ content }}
-{% endif %}
+
 
 </div>
 </div>

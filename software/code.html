@@ -6,3 +6,275 @@ header_title: Software - Code
 header_sub_title: A look into the software that runs Pi-Lock
 side_menu: software
 ---
+<div class="col-md-10 col-sm-9 main-content">
+<h5 id="read">Reading the RFID tags</h5>
+
+<p>This method opens the Raspberry Pi’s serial port, and loops continuously to read a RFID card/tag. It is the primary
+	method of the Pi-Lock, and starts when the RPi boots up. If a card is found, it calls the findTag() function, which
+	in turn searches in the local SQLite database (table: seguridad_permisos) for the card, and then determines if the
+	scanned card if valid for entry.</p>
+
+<p>Note: Check the configuration.py file for configuring the serial port variables. The .conf signifies a variable
+	inside this file.</p>
+
+<pre>
+conf.ser.open()                                           # Open serial port
+
+def readCard():
+try:
+LED("blue")                                       # Turn on Blue LED
+while True:                                       # Loop until card is scanned
+conf.ser.flushInput()                         # Clean out the serial port
+LED("blue")
+rfidData = conf.ser.readline().strip()        # Read input and format
+print "Line: "
+if len(rfidData) > 0:
+rfidData = rfidData[1:13]                 # Get digits 1 to 13 of input
+print "Card Scanned: ", rfidData
+print findTag(rfidData)                   # Call findTag method, check database
+
+except:
+errorLog.classErrorLog(sys.exc_info())            # Log the error in the ErrorLog class
+
+finally:
+conf.ser.close()                                  # Close serial port
+conf.db.close()                                   # Close SQLite database
+RPIO.cleanup()                                    # Cleanup GPIO pins
+</pre>
+
+
+<h5 id="led">Turning on a LED</h5>
+
+<p> A simple method to switch the LEDs’ color state. The parameter colorOn directs which light to turn on, thereby
+	switching off the remaining two colors. The conf.GREEN, conf.RED, conf.BLUE variables are set in the
+	configuration.py file, where each value represents a GPIO pin, set as an integer. In this instance, GREEN = 4, RED =
+	17 and BLUE = 22.</p>
+
+<pre>
+def LED(colorON):
+if colorON == "green":                         # if parameter is 'green'
+RPIO.output(conf.GREEN, True)              # Set green GPIO pin = True  / On
+RPIO.output(conf.RED, False)               # Set red GPIO pin   = False / Off
+RPIO.output(conf.BLUE, False)              # Set blue GPIO pin  = False / Off
+time.sleep(1)
+
+elif colorON == "red":
+RPIO.output(conf.GREEN, False)
+RPIO.output(conf.RED, True)
+RPIO.output(conf.BLUE, False)
+time.sleep(1)
+
+elif colorON == "blue":
+RPIO.output(conf.GREEN, False)
+RPIO.output(conf.RED, False)
+RPIO.output(conf.BLUE, True)
+
+else:
+return "Error"                               # Error if parameter is wrong
+</pre>
+
+
+<h5 id="check">Check if card is permitted to enter</h5>
+<pre>
+def findTag(inputTag):
+permiso = classPermiso(inputTag)
+
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+
+if currentDay is 7: dateIsSunday = True
+else: dateIsSunday = False
+
+if permiso.permission == conf.PERMISSION_YES:
+if (permiso.endHour > currentTime > permiso.startHour) or (permiso.startHour is None and permiso.endHour is None):
+if currentDate < permiso.endDate:
+if ((dateIsSunday is True) and permiso.sundayPermission == 1) or (dateIsSunday is False):
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+LED("green")
+time.sleep(1)
+return "Access Granted"
+else:
+LED("red")
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+time.sleep(1)
+return "Cannot enter on a Sunday"
+else:
+LED("red")
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+time.sleep(1)
+return "Date is too old"
+else:
+LED("red")
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+time.sleep(1)
+return "You are not permitted to enter at this Time"
+
+elif permiso.permission == conf.PERMISSION_NO:
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+LED("red")
+time.sleep(1)
+return "Access Denied"
+
+elif permiso.permission == conf.PERMISSION_BLACKLIST:
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+LED("red")
+time.sleep(1)
+return "!!! Alert !!!"
+
+elif permiso.permission == conf.PERMISSION_PIN:
+if (permiso.endHour > currentTime > permiso.startHour) or (permiso.startHour is None and permiso.endHour is None):
+if currentDate < permiso.endDate:
+if ((dateIsSunday is True) and permiso.sundayPermission == 1) or (dateIsSunday is False):
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+#pinInput(permiso.personPIN)
+else:
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+return "Cannot enter on a Sunday"
+else:
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+return "Date is too old"
+else:
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+return "You are not permitted to enter at this Time"
+else:
+entry = classEntradaLog(permiso)
+entry.postSQLite(), entry.postJSON()
+return "Unkown Permission"
+</pre>
+
+<h5 id="classes">Classes</h5>
+
+<p>Pi-Lock employs the use of a few object-oriented classes to make the source code more efficient, legible, and
+	comprehensible. The classes are broken up into the following files:</p>
+
+<p>EntryLog: Logs an entry in local SQLite db, and post data in JSON format to server
+	ErrorLog :Logs an error in local SQLite db Permission
+	With the scanned RFID tag #, looks into local SQLite db for the matching information, and sets object’s instance
+	variables to the record found, else to None
+	SystemStats: Records and saves the RPi’s CPU temperature, and RAM, CPU and SD-card usage in JSON format
+	Class – Log an Entry
+	On initialization, the instance variables of the parameter permiso are passed on to the EntryLog class, and used for
+	two actions: insert into the local SQLite db and post the JSON to a sever via HTTP protocol.
+</p>
+
+<h5 id="class-log-entry">Class – Log Entry in DB</h5>
+
+<pre>
+import json, datetime, sys
+import piLock.configuration as conf
+import classErrorLog as errorLog
+
+class classEntradaLog:
+def __init__(self, permiso):                        # permiso is a class previously initialized in readRFID and passed on to this class
+self.doorNumber = permiso.doorNumber
+self.rfidData = permiso.rfidTag
+self.personID = permiso.personID
+self.personName = permiso.personName
+self.curDT = str(datetime.datetime.now())
+self.permission = permiso.permission
+
+def postSQLite(self):
+try:
+with conf.db:
+if len(self.rfidData) == 12:
+cur = conf.db.cursor()
+queryString = "INSERT INTO seguridad_entrada(puerta_num, tarjeta_RFID, persona_SEQ, persona, fecha_hora, permiso) VALUES (?,?,?,?,?,?)"
+cur.execute(queryString, (self.doorNumber, self.rfidData, self.personID, self.personName, self.curDT, self.permission))
+
+except:
+errorLog.classErrorLog(sys.exc_info())
+
+def postJSON(self):
+jsonLog = [{'SEQ': self.doorNumber, 'puerta_num': self.doorNumber, 'tarjeta_RFID': self.rfidData, 'persona_SEQ': self.personID, 'persona': self.personName, 'fecha_hora': self.curDT, 'permiso': self.permission}]
+data_string = json.dumps(jsonLog)
+print 'JSON:', data_string
+</pre>
+
+
+<h5 id="class-search-db">Class – Search in DB for Scanned RFID #</h5>
+
+<p>When a card is scanned, the Permission Class is initialized, and the RFID tag # is passed through as a parameter. The
+	RFID tag # is then used to search the local SQLite DB in the table seguridad_permisos using a "SELECT * FROM ..."
+	query. If the query returns null, the permission variables are set to None, otherwise the information matching the
+	tag # is saved to the class’ instance methods.</p>
+
+<pre>
+class classPermiso:
+def __init__(self, tag):
+self.rfidTag = tag
+try:
+with conf.db:
+c = conf.db.cursor()
+c.execute("SELECT * FROM %s WHERE (tarjeta_RFID=:x)" % conf.permisoTable, {"x": self.rfidTag})
+row = c.fetchone()
+
+if row is None:
+self.tagRecognized = conf.NO
+self.doorNumber = None
+self.permission = conf.PERMISSION_NO
+self.personID = self.personName = self.personPIN = self.personPhoto = None
+self.startHour = "00:00:00"
+self.endHour = "24:00:00"
+self.sundayPermission = "0"
+self.endDate = "2100-01-01"
+
+else:
+self.tagRecognized = conf.YES
+self.doorNumber = row[1]
+self.personID = row[3]
+self.personName = row[4]
+self.personPIN = int(row[5])
+self.permission = row[6]
+self.sundayPermission = row[7]
+self.startHour = row[8]
+self.endHour = row[9]
+self.endDate = row[10]
+
+except:
+errorLog.classErrorLog(sys.exc_info())
+</pre>
+
+<h5 id="class-log-error">Class – Log an Error</h5>
+
+<p>When an error occurs, it is important to log it. Rather than simply make a .log file, Pi-Lock opts to write each
+	error in the SQLite db. The error log is detailed and records the error type, message, line number, file name and
+	string of the line on which the error occurred.
+</p>
+
+<pre>
+import linecache, datetime, os, sys
+import piLock.configuration as conf
+
+class classErrorLog:
+def __init__(self, sysError):
+self.eType, self.eObj, self.eTB = sysError
+f = self.eTB.tb_frame
+self.lineNumber = self.eTB.tb_lineno
+self.fileName = os.path.split(f.f_code.co_filename)[1]
+linecache.checkcache(self.fileName)
+self.errorType = self.eType.__name__
+self.errorMsg = self.eObj
+self.lineStr = linecache.getline(self.fileName, self.lineNumber, f.f_globals).strip()
+
+def insertDbError(self):
+try:
+db = conf.sqlite3.connect(conf.dbPath)
+with db:
+cur = db.cursor()
+query = "INSERT INTO %s VALUES(:SEQ, :fecha, :error, :msj, :archivo, :linea, :cont)"
+insert = {'SEQ':conf.SEQ, 'fecha':datetime.datetime.now(), 'error': self.errorType, 'msj':self.errorMsg, 'archivo':self.fileName, 'linea':self.lineNumber, 'cont':self.lineStr}
+cur.execute(query % conf.errorTable, insert)
+except:
+classErrorLog(sys.exc_info())
+</pre>
+</div>
