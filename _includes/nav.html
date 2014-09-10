@@ -8,33 +8,33 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="{{ site.baseurl }}/">
-				<img class="site-logo" src="{{ site.baseurl }}/assets/images/Logo1.png">
+			<a class="navbar-brand" href="/">
+				<img class="site-logo" src="/assets/images/Logo1.png">
 			</a>
 		</div>
 
 		<div class="nav-main navbar-collapse collapse ">
 			<!--<ul class="nav navbar-nav pull-right ">
-				<li><a class="hardware-nav nav-link" href="{{ site.baseurl }}/hardware/overview.html">Hardware</a></li>
-				<li><a class="software-nav nav-link" href="{{ site.baseurl }}/software/overview.html">Software</a></li>
-				<li><a class="frontend-nav nav-link" href="{{ site.baseurl }}/frontend/overview.html">Front End</a></li>
+				<li><a class="hardware-nav nav-link" href="/hardware/overview.html">Hardware</a></li>
+				<li><a class="software-nav nav-link" href="/software/overview.html">Software</a></li>
+				<li><a class="frontend-nav nav-link" href="/frontend/overview.html">Front End</a></li>
 			</ul>
 			-->
 			<ul class="nav navbar-nav pull-right ">
 				{% if page.active == "software" %}
-				<li><a class="software-nav nav-link active" href="{{ site.baseurl }}/software/overview.html">Software</a></li>
+				<li><a class="software-nav nav-link active" href="/software/overview.html">Software</a></li>
 				{% else %}
-				<li><a class="software-nav nav-link" href="{{ site.baseurl }}/software/overview.html">Software</a></li>
+				<li><a class="software-nav nav-link" href="/software/overview.html">Software</a></li>
 				{% endif %}
 				{% if page.active == "hardware" %}
-				<li><a class="hardware-nav nav-link active" href="{{ site.baseurl }}/hardware/overview.html">Hardware</a></li>
+				<li><a class="hardware-nav nav-link active" href="/hardware/overview.html">Hardware</a></li>
 				{% else %}
-				<li><a class="hardware-nav nav-link" href="{{ site.baseurl }}/hardware/overview.html">Hardware</a></li>
+				<li><a class="hardware-nav nav-link" href="/hardware/overview.html">Hardware</a></li>
 				{% endif %}
 				{% if page.active == "frontend" %}
-				<li><a class="frontend-nav nav-link active" href="{{ site.baseurl }}/frontend/overview.html">Front End</a></li>
+				<li><a class="frontend-nav nav-link active" href="/frontend/overview.html">Front End</a></li>
 				{% else %}
-				<li><a class="frontend-nav nav-link" href="{{ site.baseurl }}/frontend/overview.html">Front End</a></li>
+				<li><a class="frontend-nav nav-link" href="/frontend/overview.html">Front End</a></li>
 				{% endif %}
 			</ul>
 		</div>
