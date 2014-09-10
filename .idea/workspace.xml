@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f9d482c-56bf-4255-a1cb-b96e46e03137" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/{{ site.baseurl }}/software/install.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/software/code.html" afterPath="$PROJECT_DIR$/_site/software/code.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/software/code.html" afterPath="$PROJECT_DIR$/software/code.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/software/compile.html" afterPath="$PROJECT_DIR$/_site/software/compile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/assets/css/custom.css" afterPath="$PROJECT_DIR$/_site/assets/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/custom.css" afterPath="$PROJECT_DIR$/assets/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/docs.html" afterPath="$PROJECT_DIR$/_layouts/docs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/foot.html" afterPath="$PROJECT_DIR$/_includes/foot.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/software/install.html" afterPath="$PROJECT_DIR$/_site/software/install.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/assets/js/main.js" afterPath="$PROJECT_DIR$/_site/assets/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/main.js" afterPath="$PROJECT_DIR$/assets/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/frontend/overview.html" afterPath="$PROJECT_DIR$/_site/frontend/overview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/hardware/overview.html" afterPath="$PROJECT_DIR$/_site/hardware/overview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/software/overview.html" afterPath="$PROJECT_DIR$/_site/software/overview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/overview.html" afterPath="$PROJECT_DIR$/frontend/overview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/overview.html" afterPath="$PROJECT_DIR$/hardware/overview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/sidemenu_frontend.html" afterPath="$PROJECT_DIR$/_includes/sidemenu_frontend.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/sidemenu_hardware.html" afterPath="$PROJECT_DIR$/_includes/sidemenu_hardware.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/sidemenu_software.html" afterPath="$PROJECT_DIR$/_includes/sidemenu_software.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/jekyll/update/2014/05/08/welcome-to-jekyll.html" afterPath="$PROJECT_DIR$/_site/jekyll/update/2014/05/08/welcome-to-jekyll.html" />
-    </list>
+    <list default="true" id="9f9d482c-56bf-4255-a1cb-b96e46e03137" name="Default" comment="" />
     <ignored path="pi-lock.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
